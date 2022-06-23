@@ -7,7 +7,8 @@ function contar() {
     var fim02 = Number(fim.value)
     var passo02 = Number(passo.value)
     var resul = document.querySelector('div#resul')
-    for (var c = 1; c <= 8; c++) {
-        resul.innerHTML = (c)
+    while (inicio02 <= fim02) {
+        resul.innerHTML += (`teste ${inicio02}`)
+        inicio02 += passo02
     }
 }
