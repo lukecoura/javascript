@@ -1,31 +1,16 @@
-var ini = document.querySelector('input#txti')
-var fi = document.querySelector('input#txtf')
-var pas = document.querySelector('input#txtp')
-var res = document.querySelector('div#res')
+var tab = document.querySelector('input#tabuada')
+var res = document.querySelector('select#seltab')
 
-function contar() {
-    res.innerHTML = ('Contando: <br>')
-    inicio = Number(ini.value)
-    fim = Number(fi.value)
-    passo = Number(pas.value)
-
-    if (ini.value.length <= 0 || fi.value.length <= 0 || pas.value.length <= 0) {
-        alert('[ERRO] Existem campos sem informação adicionada.')
-    } 
-
-    if (passo <= 0) {
-        alert('[ERRO] Impossível passar 0. Acrescentando 1')
-        passo++
-    }
-
-    if (inicio < fim) {
-        for (c = inicio; c <= fim; c += passo) {
-            res.innerHTML += (`${c} 👉 `)
-        }
+function calcular() {
+    if (tab.value.length <= 0) {
+        alert('[ERRO] Por favor, digite um número para que a tabuada seja somada.')
     } else {
-        for (c = inicio; c >= fim; c -= passo) {
-            res.innerHTML += (`${c} 👉 `)
-        }
+        tabuada = Number(tab.value)
+        res.innerHTML = ''
+        for (c = 1; c <= 10; c++) {
+            var item = document.createElement('option')
+            item.text += (`${tabuada} x ${c} = ${tabuada*c}`)
+            res.appendChild(item)
     }
-    res.innerHTML += ('🏁')
+    }
 }

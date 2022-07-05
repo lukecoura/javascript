@@ -4,22 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo de exercício</title>
+    <title>Super Contador</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
    <header>
-        <h1>Título</h1>
+        <h1>Contador</h1>
    </header> 
    <section>
         <div>
-          <p>Número: <input type="number" name="tabuada" id="tabuada">          <input type="button" value="Gerar Tabuada" onclick="calcular()"></p>
+          <p>Início: <input type="number" name="inicio" id="txti"></p>
+          <p>Fim: <input type="number" name="fim" id="txtf"></p>
+          <p>Passo: <input type="number" name="passo" id="txtp"></p>
+          <p><input type="button" value="Contar" onclick="contar()"></p>
         </div>
-        <div>
-          <select name="" id="seltab" size="10">
-               <option>Digite um valor acima</option>
-          </select>
-        </div>
+        <div id="res">Digite os valores acima</div>
    </section>
    <footer>
         <p><a href="https://www.cursoemvideo.com/">@cursoemvideo</a></p>
